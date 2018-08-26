@@ -41,7 +41,7 @@ app.get('/api/movie/in_theaters', function (req, res) {
   });
 })
 
-/*即将上映*/
+/*北美票房榜*/
 app.get('/api/movie/coming_soon', function (req, res) {
   let ori_url = cutUrl(req.originalUrl);
   let sreq = request.get( HOST + ori_url )
@@ -52,7 +52,7 @@ app.get('/api/movie/coming_soon', function (req, res) {
 })
 
 /*最新电影*/
-app.get('/api/movie/new_movies', function (req, res) {
+app.get('/api/movie/us_box', function (req, res) {
   let ori_url = cutUrl(req.originalUrl);
   let sreq = request.get( HOST + ori_url )
   sreq.pipe(res);
